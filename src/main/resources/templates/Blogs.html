@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="https://www.thymeleaf.org" th:replace="~{/normal/base::layout(~{::section})}">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bogs</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+
+    <section>
+
+        <!-- Project Section Start -->
+        <div class="Project-main px-10 pb-4">
+
+            <!-- Resume Heading Start  -->
+            <div class="Project_Head">
+
+                <div class="heading flex item-center">
+                    <h1 class="text-2xl text-gray-900 font-semibold font-sans">Blogs</h1>
+                    <hr class="bg-pink-700 w-28 h-0.5 relative top-0.5 rounded-lg left-2">
+                </div>
+            </div>
+            <!-- Project Heading end -->
+
+            <div class="projects grid xl:grid-cols-2 gap-4 mt-8">
+
+
+                <!-- //////////////////////////////////////////////////////// -->
+                <!-- First Project -->
+                <div th:each="blogs:${blogs}"
+                    class="projects h-full bg-gray-800 shadow-2xl border-2 border-gray-800 shadow-gray-100/80 rounded-lg text-white">
+
+                    <!-- Project Image Start -->
+                    <!-- <div class="rounded-lg">
+                        <img src="../img/thumnail.jpg" class="rounded-t-lg" alt="np-image" />
+                    </div> -->
+                    <!-- Project Image End -->
+
+                    <!-- Project Detail Start -->
+                    <div class="project-detail px-8 py-8">
+
+                        <!-- Title -->
+                        <h1 class="text-lg font-sans font-semibold" th:text="${blogs.blogTitle}"></h1>
+
+                        <!-- About -->
+                        <!-- <p class="text-lg font-sans font-medium leading-2 mt-4">Add custom site theming to your website
+                            with CSS variables and javascript</p> -->
+
+                        <!-- Projects Links Start -->
+                        <div
+                            class="Project-links text-sm flex flex-wrap item-center justify-between flex-row gap-2 font-sans font-medium mt-4">
+
+                            <a href="#" th:href="@{'/showPost/'+${blogs.blogId}}" target="_blank"
+                                class="flex item-center rounded-full px-8 py-2 flex-row flex-wrap gap-2 bg-blue-700 text-white hover:bg-blue-900">
+                                <span>Read</span>
+                                <span><i class="fa-brands fa-readme"></i></span>
+                            </a>
+
+                            <a href="#"
+                                class="flex item-center rounded-full px-8 py-2 flex-row flex-wrap gap-2 hover:text-yellow-700">
+                                <span>Majid Naseeem</span>
+                                <span><i class="fa-solid fa-robot"></i></span>
+                            </a>
+
+                        </div>
+                        <!-- Projects Links End -->
+
+                    </div>
+                </div>
+
+                <!-- Project Detail End -->
+                <!-- //////////////////////////////////////////////////////// -->
+
+            </div>
+
+
+            <!--Paginatio part-->
+            <nav aria-label="Page navigation example" class="mt-4">
+                <ul class="pagination">
+
+                    <li th:if="${currentPage!=0}" class="page-item"><a class="page-link"
+                            th:href="@{'/blogs/'+${currentPage-1}}" href="#">Previous</a></li>
+
+                    <li th:classappend="${currentPage==i-1?'active':''}"
+                    th:each="i:${#numbers.sequence(1,totalPage)}"
+                     class="page-item"><a class="page-link"
+                          th:href="@{'/blogs/'+${i-1}}"  href="#"><span th:text="${i}"></span></a>
+                    </li>
+
+                    <li th:if="${currentPage+1!=totalPage}" class="page-item"><a class="page-link" th:href="@{'/blogs/'+${currentPage+1}}" href="#">Next</a></li>
+
+
+                </ul>
+
+            </nav>
+
+
+        </div>
+        <!-- Project Section End -->
+
+
+
+        <script>
+            $(document).ready(() => {
+
+                $('.item').removeClass('active');
+                $('#blogs-links').addClass('active');
+
+            });
+        </script>
+
+
+    </section>
+
+
+
+
+</body>
+
+</html>

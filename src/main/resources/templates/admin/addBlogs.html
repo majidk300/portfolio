@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{/admin/admin-dashboard::layout(~{::section})}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tiny.cloud/1/jrtyvsa2p8htacoxsdu1ui4mrb3vy3os12kh73a2f13yt0x7/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
+</head>
+
+<body>
+    <section class="md:w-10/12 w-11/12 m-auto py-2">
+        <form th:action="@{/adminAccess/saveBlogPost}" method="post" th:object="${addBlogs}">
+            <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+
+                <div class="-mx-3 md:flex mb-6">
+                    <div class="md:w-full px-3">
+                        <label class="uppercase tracking-wide flex justify-center text-black text-lg font-bold mb-2"
+                            for="mytextarea">
+                            Write your content
+                        </label>
+
+                        <input class="w-full bg-gray-50 text-black border border-gray-200 rounded py-3 px-4 mb-3 mt-3"
+                            name="blogTitle" id="company" type="text" placeholder="Please enter Title" >
+
+                        <textarea id="mytextarea" name="blogPost" rows="30"
+                            class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3"
+                            placeholder="Enter your content here"></textarea>
+                    </div>
+                </div>
+                <div class="-mx-3 md:flex mt-2">
+                    <div class="md:w-full px-3">
+                        <button type="submit"
+                            class="md:w-full bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full">
+                            POST
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+        <script>
+            $(document).ready(()=>{
+
+                $('.item').removeClass('active');
+                $('.createBlogsProject').addClass('active');
+
+            });
+        </script>
+
+    </section>
+
+
+
+</body>
+
+</html>

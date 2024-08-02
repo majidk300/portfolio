@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="https://www.thymeleaf.org" th:replace="~{/admin/admin-dashboard::layout(~{::section})}">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title th:text="${Title}">Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <section>
+
+
+        <!-- Project Section Start -->
+        <div class="Project-main px-10 pb-4">
+
+            <!-- Resume Heading Start  -->
+            <!-- <div class="Project_Head">
+
+                <div class="heading flex justify-center pt-4 item-center">
+                    <h1 class="font-semibold text-red-700 text-center text-2xl font-sans">Projects</h1>
+                </div>
+            </div> -->
+            <!-- Project Heading end -->
+
+            <div class="projects grid xl:grid-cols-3 gap-4 mt-8">
+
+                <!-- ///////////////////////////////////////////////////////// -->
+                <!-- //////////////////////////////////////////////////////// -->
+                <!-- Project Start -->
+                <div th:each="projects:${projects}"
+                    class="projects h-full bg-gray-800 shadow-2xl border-2 border-gray-800 shadow-gray-100/80 rounded-lg text-white">
+
+                    <!-- Project Image Start -->
+                    <div class="rounded-lg">
+                        <img th:src="${projects.image}!=null ? @{'../../projectImage/'+${projects.image}}:@{'../../projectImage/'+${projects.image}}"
+                            class="rounded-t-lg" alt="np-image"/>
+                    </div>
+                    <!-- Project Image End -->
+
+                    <!-- Project Detail Start -->
+                    <div class="project-detail px-4 py-8">
+
+                        <!-- Title -->
+                        <h1 class="text-3xl font-sans font-semibold" th:text="${projects.projectTitle}"></h1>
+
+                        <!-- About -->
+                        <p class="text-lg font-sans font-medium leading-2 mt-4" th:text="${projects.projectDescription}"
+                            </p>
+
+                            <!-- Projects Links Start -->
+                        <div
+                            class="Project-links text-sm flex item-center flex-wrap gap-2 flex-row gap-2 font-sans font-medium mt-4">
+
+                            <a href="#" th:href="@{/adminAccess/updateProject/{projectId}(projectId=${projects.projectId})}"
+                                class="flex item-center rounded-full px-8 py-2 flex-row flex-wrap gap-2 bg-blue-700 text-white hover:bg-blue-900">
+                                <span>Update</span>
+                                <span><i class="fa-solid fa-bars-progress"></i><span>
+                            </a>
+
+
+                            <a href="#" th:href="@{/adminAccess/delete_Projects/{deleteId}(deleteId=${projects.projectId})}"
+                                class="flex no-underline item-center rounded-full px-8 py-2 flex-row flex-wrap gap-2 bg-blue-700 text-white hover:bg-blue-900">
+                                <span>Delete</span>
+                                <span><i class="fa-solid fa-video"></i></span>
+                            </a>
+
+                        </div>
+                        <!-- Projects Links End -->
+
+                    </div>
+
+
+                </div>
+                <!-- Project Detail End -->
+                <!-- ///////////////////////////////////////////////////////// -->
+
+
+                <!-- ...................... -->
+            </div>
+
+            <!--Paginatio part-->
+            <nav aria-label="Page navigation example" class="mt-4">
+                <ul class="pagination">
+
+                    <li th:if="${currentPage!=0}" class="page-item"><a class="page-link"
+                            th:href="@{'/adminAccess/show_projects/'+${currentPage-1}}" href="#">Previous</a></li>
+
+                    <li th:classappend="${currentPage==i-1?'active':''}" th:each="i : ${#numbers.sequence(1,totalPage)}"
+                        class="page-item"><a class="page-link" th:href="@{'/adminAccess/show_projects/'+${i-1}}" href="#"><span
+                                th:text="${i}"></span></a>
+                    </li>
+
+                    <li th:if="${currentPage+1!=totalPage}" class="page-item"><a class="page-link"
+                            th:href="@{'/adminAccess/show_projects/'+${currentPage+1}}" href="#">Next</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+        <!-- Project Section End -->
+
+        <script>
+            $(document).ready(()=>{
+
+                $('.item').removeClass('active');
+                $('.showAllProjects-link').addClass('active');
+
+            });
+        </script>
+
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html scroll-smooth lang="eng" xmlns:th="https://www.thymeleaf.org" th:fragment="layout(content)">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title th:text="${title}">Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' th:href="@{/css/style.css}" type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' th:href="@{/css/output.css}" type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <div class="bg-image">
+
+        <div class="px-16 pt-0 pb-5">
+
+            <div class="text-4xl text-pink-700 pt-12 pb-20"><i class="fa-regular fa-snowflake"></i></div>
+
+            <div class="profile flex mt-16 space-x-4">
+
+                <!-- profile left side part  -->
+                <div class="profile-part sticky top-20 h-full py-8 px-6 bg-white md:w-72 lg:w-80 xl:w-96 rounded-2xl">
+
+                    <!-- profile Image start  -->
+                    <div class="img flex item-center justify-center rounded-lg -mt-28">
+                        <img class="rounded-xl" src="../../img/myPhoto.png" width="120px" height="120px"
+                            alt="Profile" />
+                    </div>
+                    <!-- profile Image End -->
+
+                    <!-- profile Name Start -->
+                    <h1 class="text-center text-gray-900 text-lg font-medium font-sans tracking-wide py-1.5">Majid
+                        Naseem</h1>
+                    <!-- profile Name end -->
+
+                    <span class="flex item-center justify-center text-gray-500 font-medium italic text-xs -mt-2">Java
+                        Developer</span>
+
+                    <!-- social media  start -->
+                    <div class="social-media flex item-center justify-center flex-nowrap gap-x-2 py-3">
+                        <a href="#"
+                            class="text-pink-700 bg-gray-50 px-2 py-1 rounded hover:bg-pink-500 hover:text-white ease-in-out duration-400"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="text-blue-700 bg-gray-50 px-2 py-1 rounded hover:bg-pink-500 hover:text-white ease-in-out duration-400"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="#"
+                            class="text-blue-900 bg-gray-50 px-2 py-1 rounded hover:bg-pink-500 hover:text-white ease-in-out duration-400"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="text-red-800 bg-gray-50 px-2 py-1 rounded hover:bg-pink-500  hover:text-white ease-in-out duration-400"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="#"
+                            class="text-black-900 bg-gray-50 px-2 py-1 rounded hover:bg-pink-500 hover:text-white ease-in-out duration-400"><i
+                                class="fa-brands fa-github"></i></a>
+
+                    </div>
+                    <!-- social media  end -->
+
+                    <!-- profile information start -->
+                    <div class="profile-info bg-gray-100 px-5 py-3 rounded-lg">
+
+                        <!-- Phone start -->
+                        <div class="profile-info-data flex py-2">
+
+                            <div class="profile-icon">
+                                <i class="fa-solid fa-mobile-screen-button text-pink-400"></i>
+                            </div>
+
+                            <div class="profile-data -mt-1.5 px-2">
+                                <span class="text-xs text-gray-500 font-medium">Phone</span>
+                                <h2 class="text-sm text-gray-700 font-medium">+91 7639934954</h2>
+                            </div>
+
+                        </div>
+                        <!-- Phone end -->
+
+                        <!-- email start -->
+                        <div class="profile-info-data flex py-2">
+
+                            <div class="profile-icon">
+                                <i class="fa-solid fa-envelope-open-text text-green-400"></i>
+                            </div>
+
+                            <div class="profile-data -mt-1.5 px-2">
+                                <span class="text-xs text-gray-500 font-medium">Email</span>
+                                <h2 class="text-sm text-gray-700 font-medium">majidmaseem726@gmail.com</h2>
+                            </div>
+
+                        </div>
+                        <!-- email end -->
+
+                        <!-- Adress start -->
+                        <div class="profile-info-data flex py-2">
+
+                            <div class="profile-icon">
+                                <i class="fa-solid fa-location-dot text-pink-400"></i>
+                            </div>
+
+                            <div class="profile-data -mt-1.5 px-2">
+                                <span class="text-xs text-gray-500 font-medium">Location</span>
+                                <h2 class="text-sm text-gray-700 font-medium">Saharsa Bihar</h2>
+                            </div>
+
+                        </div>
+                        <!-- Adress end -->
+                        <!-- Adress start -->
+                        <div class="profile-info-data flex py-2">
+
+                            <div class="profile-icon">
+                                <i class="fa-solid fa-location-dot text-purple-500"></i>
+                            </div>
+
+                            <div class="profile-data -mt-1.5 px-2">
+                                <span class="text-xs text-gray-500 font-medium">Location</span>
+                                <h2 class="text-sm text-gray-700 font-medium">Saharsa Bihar</h2>
+                            </div>
+
+                        </div>
+                        <!-- Adress end -->
+
+
+                    </div>
+
+                    <a href="#" class="flex item-center justify-center mt-4">
+                        <span
+                            class="CV-Download text-white rounded bg-gradient-to-r from-red-400 to-pink-500 px-4 py-2 ease-in-out duration-300 ">
+                            <i class="fa-solid fa-download"></i>
+                            <span> Download CV</span>
+                        </span>
+                    </a>
+
+
+                    <!-- profile information end -->
+
+                </div>
+
+                <!-- profile right side detail part  -->
+                <div class="profile-details flex-1">
+
+                    <!-- Option start -->
+                    <div class="flex justify-end">
+                        <span
+                            class="inline-flex h-full text-center justify-center text-xs gap-x-2 bg-white py-2 px-2 rounded-xl">
+
+                            <a th:href="@{/}" id="about-links"
+                                class="item flex items-center justify-center flex-col font-medium shrink bg-gray-100 w-16 h-16 text-gray-500 py-2 px-3 hover:bg-pink-400 hover:text-white rounded-lg ease-in-out duration-300">
+                                <span><i class="fa-solid fa-user"></i></span>
+                                <span>About</span>
+                            </a>
+
+                            <a th:href="@{/resume}" id="resume-links"
+                                class="item flex items-center justify-center flex-col font-medium shrink bg-gray-100 w-16 h-16 text-gray-500 py-2 px-3 hover:bg-pink-400 hover:text-white rounded-lg ease-in-out duration-300">
+                                <span><i class="fa-regular fa-file-lines"></i></span>
+                                <span>Resume</span>
+                            </a>
+
+                            <a th:href="@{/projects/0}" id="projects-links"
+                                class="item flex items-center justify-center flex-col font-medium shrink bg-gray-100 w-16 h-16 text-gray-500 py-2 px-3 hover:bg-pink-400 hover:text-white rounded-lg ease-in-out duration-300">
+                                <span><i class="fa-solid fa-diagram-project"></i></span>
+                                <span>Project</span>
+                            </a>
+
+                            <a th:href="@{/blogs/0}" id="blogs-links"
+                                class="item flex items-center justify-center flex-col font-medium shrink bg-gray-100 w-16 h-16 text-gray-500 py-2 px-3 hover:bg-pink-400 hover:text-white rounded-lg ease-in-out duration-300">
+                                <span><i class="fa-brands fa-blogger-b"></i></span>
+                                <span>Blogs</span>
+                            </a>
+
+                            <a th:href="@{/contact}" id="contact-links"
+                                class="item flex items-center justify-center flex-col font-medium shrink bg-gray-100 w-16 h-16 text-gray-500 py-2 px-3 hover:bg-pink-400 hover:text-white rounded-lg ease-in-out duration-300">
+                                <span><i class="fa-regular fa-address-book"></i></span>
+                                <span>Contact</span>
+                            </a>
+
+                        </span>
+                    </div>
+                    <!-- Option start -->
+
+                    <div class="profile-details pt-8 pb-4 mt-2 bg-white rounded-2xl">
+
+                        <div th:replace="${content}"></div>
+
+                        <p class="py-4 text-center text-sm text-gray-600">&copy; 2024 All rights reserved by Majid
+                            Naseem.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- javascript
+    <script th:src="@{/js/script.js}" src='main.js'></script> -->
+
+</body>
+
+</html>

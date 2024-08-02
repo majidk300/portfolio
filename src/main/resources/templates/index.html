@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="https://www.thymeleaf.org" th:replace="~{/normal/base::layout(~{::section})}">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>home-page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section>
+
+    <!-- About  -->
+    <div class="About_Head px-10">
+
+      <div class="heading flex item-center">
+        <h1 class="text-2xl text-gray-900 font-semibold font-sans">About</h1>
+        <hr class="bg-pink-700 w-28 h-0.5 relative top-0.5 rounded-lg left-2">
+      </div>
+
+      <p class="text-xs font-sans font-semibold text-gray-600 mt-1 traking-wide leading-relaxed">My name is Md Majid
+        Naseem. I completed my 10th and 12th grades from Iqra Public School in Aligarh and earned my undergraduate
+        degree in BCA from Patlipura University. I am an experienced Java web developer, skilled in C++, data
+        structures, Java, JSP, Servlets, JDBC, Hibernate, MySQL, Spring, and JWT. Additionally, I have proficiency in
+        frontend technologies like HTML, CSS, Bootstrap, and Tailwind CSS. I am currently focused on mastering Spring
+        Boot to further develop my web development expertise.
+      </p>
+    </div>
+    <!-- About end -->
+
+    <!-- What i do -->
+    <div class="what-ido px-10">
+
+      <h1 class="text-lg font-bold font-sans text-gray-800 mt-3">What I Do!</h1>
+
+
+      <div class="profile-info-container grid md:grid-cols-2 sm:grid-cols-1 gap-4 mt-3">
+
+        <!-- UI / UX Design Start -->
+        <div class="profile-info-data flex rounded-xl bg-red-50 px-4 py-4">
+          <div class="profile-icon -mt-1">
+            <i class="fa-solid fa-swatchbook text-purple-500 text-2xl"></i>
+          </div>
+          <div class="profile-data -mt-1.5 px-4">
+            <span class="text-sm text-gray-800 font-medium">Ui/Ux Design</span>
+            <p class="text-xs font-sans font-semibold text-gray-600 mt-2 tracking-wide leading-relaxed">
+              UI/UX design refers to the process of designing user interfaces and user experiences for digital products,
+              such as websites, mobile apps, and software applications. The goal of UI/UX design is to create products
+              that are both visually appealing and easy to use, providing a seamless and enjoyable experience for the
+              user.
+            </p>
+          </div>
+        </div>
+        <!-- UI / UX Design End -->
+
+        <!-- UI / UX Design Start -->
+        <div class="profile-info-data flex rounded-xl bg-purple-100 px-4 py-4">
+          <div class="profile-icon -mt-1">
+            <i class="fa-brands fa-buromobelexperte text-yellow-500 text-2xl"></i>
+          </div>
+          <div class="profile-data -mt-1.5 px-4">
+            <span class="text-sm text-gray-800 font-medium">App Development</span>
+            <p class="text-xs font-sans font-semibold text-gray-600 mt-2 tracking-wide leading-relaxed">
+              App development involves the process of creating software applications that run on mobile devices,
+              computers, or other electronic devices. This process includes several stages, such as planning, designing,
+              coding, testing, and deployment.
+            </p>
+          </div>
+        </div>
+        <!-- UI / UX Design End -->
+
+        <!-- UI / UX Design Start -->
+        <div class="profile-info-data flex rounded-xl bg-purple-100 px-4 py-4">
+          <div class="profile-icon -mt-1">
+            <i class="fa-solid fa-camera-retro text-red-500 text-2xl"></i>
+
+          </div>
+          <div class="profile-data -mt-1.5 px-4">
+            <span class="text-sm text-gray-800 font-medium">Photograpghy</span>
+            <p class="text-xs font-sans font-semibold text-gray-600 mt-2 tracking-wide leading-relaxed">
+              Photography is the art and practice of capturing images using a camera. It involves the process of
+              recording light or other electromagnetic radiation, either electronically by means of an image sensor or
+              chemically through a light-sensitive material like photographic film.
+            </p>
+          </div>
+        </div>
+        <!-- UI / UX Design End -->
+
+        <!-- UI / UX Design Start -->
+        <div class="profile-info-data flex rounded-xl bg-red-50 px-4 py-4">
+          <div class="profile-icon -mt-1">
+            <i class="fa-solid fa-code text-blue-500 text-2xl"></i>
+          </div>
+          <div class="profile-data -mt-1.5 px-4">
+            <span class="text-sm text-gray-800 font-medium">Web Development</span>
+            <p class="text-xs font-sans font-semibold text-gray-600 mt-2 tracking-wide leading-relaxed">
+
+              Web development is the process of creating, building, and maintaining websites and web applications that
+              are accessible via the internet. It encompasses a wide range of activities and technologies, from
+              designing the user interface to writing the code that makes the website function.
+            </p>
+          </div>
+        </div>
+        <!-- UI / UX Design End -->
+
+      </div>
+
+
+    </div>
+    <!-- What i do  end -->
+
+    <!-- Clinet Start -->
+    <div class="Clinet bg-gray-50 mt-8 px-10 py-4">
+
+      <h1 class="text-lg py-1 font-bold font-sans text-gray-800 text-center">Services</h1>
+
+      <div class="py-4 flex flex-row gap-4 item-center justify-around content-around">
+
+        <div class="w-16 h-16">
+          <img src="../img/call-center.png" />
+        </div>
+
+        <div class="w-16 h-16">
+          <img src="../img/marketing.png" />
+        </div>
+
+        <div class="w-16 h-16">
+          <img src="../img/attraction.png" />
+        </div>
+
+        <div class="w-16 h-16">
+          <img src="../img/24-hours-support.png" />
+        </div>
+
+        <div class="w-16 h-16">
+          <img src="../img/service.png" />
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- Clinet End -->
+
+    <script>
+      $(document).ready(() => {
+
+        $('.item').removeClass('active');
+        $('#about-links').addClass('active');
+
+      });
+    </script>
+
+
+  </section>
+
+
+</body>
+
+</html>
