@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailOtpService {
 
-    public boolean sendOtp(String subject, String message, String to)
+    public boolean sendMails(String subject, String message, String to)
     {
         boolean f = false;
 
@@ -38,7 +38,7 @@ public class EmailOtpService {
             @Override
             protected PasswordAuthentication getPasswordAuthentication()
             {
-                return new PasswordAuthentication(from, "dpxj xcef ptwf jelp");
+                return new PasswordAuthentication(from, "puhn youp uhqi umgg");
             }
         });
 

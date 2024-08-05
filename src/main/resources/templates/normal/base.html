@@ -25,14 +25,19 @@
 
     <div class="bg-image">
 
-        <div class="px-16 pt-0 pb-5">
+        <div class="md:px-16 lg:px-32 pt-0 pb-5">
 
-            <div class="text-4xl text-pink-700 pt-12 pb-20"><i class="fa-regular fa-snowflake"></i></div>
+            <div class="snow text-4xl text-pink-700 pt-12 pb-20 relative ml-4" onclick="func()"><i
+                    class="fa-regular fa-snowflake"></i></div>
 
-            <div class="profile flex mt-16 space-x-4">
+            <div class="bars text-4xl text-pink-700 pt-12 pb-8 relative ml-4 hidden" onclick="func()"><i
+                    class="fa-solid fa-bars-staggered"></i></div>
+
+            <div class="profile lg:flex mt-16 space-x-4">
 
                 <!-- profile left side part  -->
-                <div class="profile-part sticky top-20 h-full py-8 px-6 bg-white md:w-72 lg:w-80 xl:w-96 rounded-2xl">
+                <div
+                    class="profile-part lg:sticky lg:top-20 h-full  py-8 px-6 bg-white md:w-96 lg:w-96 xl:w-96 z-50 rounded-2xl">
 
                     <!-- profile Image start  -->
                     <div class="img flex item-center justify-center rounded-lg -mt-28">
@@ -51,19 +56,20 @@
 
                     <!-- social media  start -->
                     <div class="social-media flex item-center justify-center flex-nowrap gap-x-2 py-3">
-                        <a href="#"
+                        <a href="https://www.instagram.com/majidk300/" target="_blank"
                             class="text-pink-700 bg-gray-50 px-2 py-1 rounded hover:bg-pink-500 hover:text-white ease-in-out duration-400"><i
                                 class="fa-brands fa-instagram"></i></a>
                         <a href="#"
                             class="text-blue-700 bg-gray-50 px-2 py-1 rounded hover:bg-pink-500 hover:text-white ease-in-out duration-400"><i
                                 class="fa-brands fa-twitter"></i></a>
-                        <a href="#"
+                        <a href="https://www.linkedin.com/in/md-majid-naseem-b8a579281"
+                            target="_blank"
                             class="text-blue-900 bg-gray-50 px-2 py-1 rounded hover:bg-pink-500 hover:text-white ease-in-out duration-400"><i
                                 class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"
+                        <a href="https://youtu.be/W65AIn1EItM" target="_blank"
                             class="text-red-800 bg-gray-50 px-2 py-1 rounded hover:bg-pink-500  hover:text-white ease-in-out duration-400"><i
                                 class="fa-brands fa-youtube"></i></a>
-                        <a href="#"
+                        <a href="https://github.com/majidk300" target="_blank"
                             class="text-black-900 bg-gray-50 px-2 py-1 rounded hover:bg-pink-500 hover:text-white ease-in-out duration-400"><i
                                 class="fa-brands fa-github"></i></a>
 
@@ -104,18 +110,7 @@
                         <!-- email end -->
 
                         <!-- Adress start -->
-                        <div class="profile-info-data flex py-2">
 
-                            <div class="profile-icon">
-                                <i class="fa-solid fa-location-dot text-pink-400"></i>
-                            </div>
-
-                            <div class="profile-data -mt-1.5 px-2">
-                                <span class="text-xs text-gray-500 font-medium">Location</span>
-                                <h2 class="text-sm text-gray-700 font-medium">Saharsa Bihar</h2>
-                            </div>
-
-                        </div>
                         <!-- Adress end -->
                         <!-- Adress start -->
                         <div class="profile-info-data flex py-2">
@@ -135,9 +130,10 @@
 
                     </div>
 
-                    <a href="#" class="flex item-center justify-center mt-4">
+                    <a href="../../pdf/Resume - Majid Naseem.pdf" class="flex items-center justify-center mt-4"
+                        target="_blank">
                         <span
-                            class="CV-Download text-white rounded bg-gradient-to-r from-red-400 to-pink-500 px-4 py-2 ease-in-out duration-300 ">
+                            class="CV-Download text-white rounded bg-gradient-to-r from-red-400 to-pink-500 px-4 py-2 ease-in-out duration-300">
                             <i class="fa-solid fa-download"></i>
                             <span> Download CV</span>
                         </span>
@@ -149,7 +145,7 @@
                 </div>
 
                 <!-- profile right side detail part  -->
-                <div class="profile-details flex-1">
+                <div class="profile-details lg:lg:w-full">
 
                     <!-- Option start -->
                     <div class="flex justify-end">
@@ -213,6 +209,35 @@
 
     <!-- javascript
     <script th:src="@{/js/script.js}" src='main.js'></script> -->
+
+
+    <script>
+        // Variable to track the current position
+        var isRight = true;
+
+        function func() {
+
+            // Get the profile-part element
+            var profilePart = $('.profile-part');
+
+            // Toggle the position
+            if (isRight) {
+                // Move to the left
+                profilePart.removeClass('move-left').addClass('move-right');
+            } else {
+                // Move to the right
+                profilePart.removeClass('move-right').addClass('move-left');
+            }
+
+            // Toggle the state
+            isRight = !isRight;
+        }
+
+        $(document).ready(function () {
+            // Any additional initialization code can go here
+        });
+    </script>
+
 
 </body>
 

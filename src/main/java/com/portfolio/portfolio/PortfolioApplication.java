@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.portfolio.portfolio.services.UserService;
 
 @SpringBootApplication
-public class PortfolioApplication  implements CommandLineRunner{
+public class PortfolioApplication{
 
 	@Autowired
     private UserService userService;
@@ -17,12 +17,12 @@ public class PortfolioApplication  implements CommandLineRunner{
 		SpringApplication.run(PortfolioApplication.class, args);
 	}
 
-	@Override
-    public void run(String... args) throws Exception {
-        String username = "majidnaseem700@gmail.com";
-        String password = "123";
-        userService.registerUser(username, password);
-    }
+	// @Override
+    // public void run(String... args) throws Exception {
+    //     String username = "majidnaseem720@gmail.com";
+    //     String password = "majid123@";
+    //     userService.registerUser(username, password);
+    // }
     
 
 }

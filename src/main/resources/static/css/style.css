@@ -1,22 +1,53 @@
 /* background image start  */
 a{
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
-.bg-image{
+body {
 
-    background-image:url("../img/bg-image.jpg");
-    width:100%;
-    height:100vh;
+    background-image: url("../img/bg-image.jpg");
+    width: 100%;
+    height:100%;
     overflow-y: scroll;
-    background-size:cover;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+
 /* background image start end */
 
-.active{
-    background-color: rgb(244 114 182)!important;
-    color:white!important;
+.active {
+    background-color: rgb(244 114 182) !important;
+    color: white !important;
+
+}
+
+@media (max-width:1030px) {
+
+    .profile-part {
+        position: absolute !important;
+        top: 200px !important;
+        left: -800px !important;
+        height:auto!important;
+        transition: all 0.3s ease-in-out;
+        /* left:-1000px!important; */
+    }
+
+    .snow{
+        display: none;
+    }
+
+    .bars{
+        display: block!important;
+    }
+
+    .move-right {
+        left: 10px !important;
+    }
+
+    .move-left {
+        left: -800px !important;
+    }
+
 
 }

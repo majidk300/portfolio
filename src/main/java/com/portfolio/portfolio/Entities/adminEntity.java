@@ -13,7 +13,7 @@ public class adminEntity {
     @Id
     private int adminId;
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String email;
 
     @Column(nullable = false)
