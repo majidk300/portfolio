@@ -22,31 +22,40 @@ body {
 
 }
 
+
+/* responsive */
+
 @media (max-width:1030px) {
 
     .profile-part {
         position: absolute !important;
-        top: 200px !important;
+        top: 150px !important;
         left: -800px !important;
+        width:95%!important;
         height:auto!important;
+        border:1px solid #e2e2e2;
         transition: all 0.3s ease-in-out;
         /* left:-1000px!important; */
     }
 
     .snow{
         display: none;
+        transition: all 0.3s ease-in-out;
     }
 
     .bars{
-        display: block!important;
+        display: block;
+        transition: all 0.3s ease-in-out;
     }
 
+   
     .move-right {
-        left: 10px !important;
+        left: 10px!important;
+        
     }
 
     .move-left {
-        left: -800px !important;
+        left: -800px!important;
     }
 
 
