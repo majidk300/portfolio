@@ -31,7 +31,7 @@
             </div>
 
             <!-- bars -->
-            <div class="bars text-4xl text-pink-700 pt-4 pb-4 relative ml-4" onclick="func()"><i
+            <div class="bars text-4xl text-pink-700 pt-4 pb-4 relative ml-4 hidden" onclick="func()"><i
                     class="fa-solid fa-bars-staggered"></i></div>
 
             <!-- cross bar -->
@@ -228,14 +228,14 @@
                 // Move to the right
                 console.log('Moving to the right');
                 profilePart.removeClass('move-left').addClass('move-right');
-                $('.cross_bars').show();
-                $('.bars').hide();
+                // $('.cross_bars').show();
+                // $('.bars').hide();
             } else {
                 // Move to the left
                 console.log('Moving to the left');
                 profilePart.removeClass('move-right').addClass('move-left');
-                $('.cross_bars').hide();
-                $('.bars').show();
+                // $('.cross_bars').hide();
+                // $('.bars').show();
             }
 
             // Log the classes to ensure they are being applied
@@ -244,12 +244,6 @@
             // Toggle the state
             isRight = !isRight;
         }
-
-        $(document).ready(function () {
-            // Initial visibility setting
-            $('.cross_bars').hide();
-            $('.bars').show();
-        });
     </script>
 
 
